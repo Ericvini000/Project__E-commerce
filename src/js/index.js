@@ -107,7 +107,10 @@ function removeButton(){
     const removeButton = document.createElement('button');
     removeButton.addEventListener('click', (e) => {
 
-        let itemId = selecionados.filter((_, index) => index === Number(e.path[2].id));
+        let itemId = selecionados.filter((_, index) => {
+            const path = e.composedPath();
+            return index === Number(path[2].id)
+        });
         itemId = itemId[0].id
         
         itensNaLista.splice(itemId,1)
@@ -127,7 +130,7 @@ function removeButton(){
             divTotalPago.innerHTML = ""
         }
 
-        selecionados = selecionados.filter((_, index) => index !== Number(e.path[2].id));
+        selecionados = selecionados.filter((_, index) => index !== Number(e.composedPath()[2].id));
         loadList()
     });
     removeButton.innerText = 'Remover produto'
