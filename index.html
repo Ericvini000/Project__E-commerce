@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="shortcut icon" href="./src/img/assets/favicon.png" type="image/x-icon">
+    <title>E-commerce</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1 class="logo">
+          <span id="purple">Purple</span>
+          Clothes
+        </h1>
+
+        <nav class="itensNav">
+          <button data-btn="">Todos</button>
+          <button data-btn="Acessórios">Acessórios</button>
+          <button data-btn="Jaquetas">Jaquetas</button>
+          <button data-btn="Camisetas">Camisetas</button>
+        </nav>
+      </div>
+      <img src="./" alt="">
+
+      <div></div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="vitrine">
+          <ul class="listaRoupas" id="listaPrincipal">
+          </ul>
+        </div>
+
+        <div class="secaoDireita">
+          <div class="carrinhoDeCompras">
+            <input type="text" placeholder="O que está procurando..." id="input" />
+            <button type="search" id="searchButton">Pesquisar</button>
+          </div>
+
+          <div class="carrinho">
+            <p id="tituloCarrinho">Carrinho de Compras</p>
+            <ul class="listaSelecionados" id="listaCompras">
+              <div class="comprasCarrinho">
+                <h3 id="carrinhoVazio">Carrinho Vazio</h3>
+                <small id="small">adicione itens</small>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./src/js/database.js"></script>
+    <script src="./src/js/index.js"></script>
+  </body>
+</html>
